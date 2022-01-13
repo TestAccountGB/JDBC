@@ -1,0 +1,22 @@
+O que e um RowSet? E basicamente um ResultSet, mas um pouco mais simples do que o mesmo, pois o RowSet e uma
+Connection, Statement e um ResultSet, mas tudo encapsulado. Alem disso o RowSet tem metodos e funcionalidades que
+Podem ser muito uteis, uma de suas principais funcionalidades e o seu Listener, que ele consegue perceber quando tem
+Uma movimentacao de cursor, execução de código (INSERT, SELECT, UPDATE etc.) e entre outro, e a gente pode colocar
+Uma lógica para cada uma dessas ações. Outra coisa muito conhecida, é o seu DisconnectedRowSets que podem realizar
+Comandos no banco de dados mesmo não estando conectados à ele, isso ocorre porque eles guardam informações do
+Banco de dados na memória, sendo necessário apenas conectar uma vez e depois pode realizar as alterações no banco
+De dados a hora que quiser.
+
+Outra vantagem de usar o mesmo e que o "type" dele já é "Scroll", ou seja, você pode movimentar o cursor mais
+Livremente e também ele é "Updatable", diferente do ResultSet que não temos a certeza do que pode vim
+
+Tipos de RowSer:
+
+JdbcRowSet - Tipo mais simples e precisa estar conectado ao banco de dados.
+CachedRowSet - Não precisa estar conectado no banco a todo momento.
+FilteredRowSet - Realiza alguns comandos para filtrar.
+WebRowSet - Usado para arquivos XML.
+JoinRowSet - Consegue juntar vários RowSet (Basicamente tenta fazer a função JOIN do SQL).
+
+Não vou falar de todos apenas do "JdbcRowSet" e "CachedRowSet", mas se tiver interessados nos outros é so pesquisar
+E se aprofundar :)

@@ -1,0 +1,17 @@
+JBDC - Java Database Connectivity
+
+Ele proporciona uma conexão universal com basicamente todos os bancos de dados, como MySQL, SQLServer etc. Mas como
+Ele consegue fazer isso? Porque o java (E também outras linguagens) não fazem a lógica de conexão para cada banco de
+De dados, é a própria empresa do banco de dados que tem que fazer sua lógica para a conexão, e eles fazem isso através
+De um arquivo, ou seja, se a gente quiser se conectar ao banco de dados MySQL, vamos ter que baixar seu conector java
+E colocar em nosso projeto e vamos poder usar a API JBDC do java que é composto por dois pacotes: "java.sql" e "javax.sql"
+Para fazer a conexão dentro do código :)
+
+As principais funções do JDBC são divididos entre três interfaces:
+
+Connection: Que faz a ligação entre o código do java entre o banco de dados e gera um Statement;
+Statement: Ele é o que faz os códigos dos bancos de dados, mas dentro do java e retorna um ResultSet;
+ResultSet: Ele é o que manipula os dados retornados do banco de dados para ser usado dentro do código java.
+
+Obs.: Para o melhor entendimento deste tópico é bom saber pelo menos o mínimo da syntax do MySQL e banco de dados
+Em geral.
