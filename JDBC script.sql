@@ -1,0 +1,8 @@
+CREATE DATABASE agencia;
+
+DELIMITER //
+CREATE PROCEDURE SP_getCompradorPorNome (termo varchar(100))
+BEGIN
+SELECT * FROM BUYER WHERE NAME LIKE termo;
+END//
+DELIMITER ;
